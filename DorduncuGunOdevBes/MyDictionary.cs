@@ -36,5 +36,29 @@ namespace DorduncuGunOdevBes
             tValues[tValues.Length - 1] = value;
 
         }
+
+        public int Length
+        {
+            get { return tKeys.Length; }
+        }
+
+        public TKey[] Keys
+        {
+            get { return tKeys; }
+        }
+
+        public TValue[] Values
+        {
+            get { return tValues; }
+        }
+
+        public void Listing()
+        {
+            for (int i = 0; i < tKeys.Length; i++)
+            {
+                Console.WriteLine("Key: "+tKeys[i]+" Value: "+ tValues[i]);            
+            }
+        }
+
     }
 }
